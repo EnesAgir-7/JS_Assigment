@@ -29,6 +29,15 @@ class Stack{
         return deleteItem
     }
 
+    //* check top element in stock 
+    peek(){
+        console.log(`top element is ${this.items[this.num-1]}`)
+        return this.items[this.num-1]
+    }
+    //* gives the exact size of stack
+    size(){
+        console.log(`The size of the stack is ${this.num}`);
+    }
 }
 
 const stack = new Stack()
@@ -43,5 +52,8 @@ stack.push(34)
 stack.push(45)
 stack.push(52)
 stack.pop()
+stack.peek()
+stack.size();
 stack.push(30)
+
 stack.pop()
