@@ -19,7 +19,16 @@ class Stack{
         }
     }
 
-    
+    //* Return and remove top element in stack
+    //* Return undefined if stack is emty
+    pop(){
+        if(this.num==0) return undefined
+        let deleteItem = this.items[this.num-1]
+        this.num -=1
+        console.log(`The top item after the stack popped is ${deleteItem}`);
+        return deleteItem
+    }
+
 }
 
 const stack = new Stack()
@@ -33,4 +42,6 @@ stack.push(32)
 stack.push(34)
 stack.push(45)
 stack.push(52)
+stack.pop()
 stack.push(30)
+stack.pop()
